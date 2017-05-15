@@ -4,21 +4,19 @@
 
 import sys
 
-x = int(sys.argv[1])
-with open('hightemp.txt') as f:
-    lines = f.readlines()
-    # n = len(lines) / x
+input = int(sys.argv[1])
+with open('hightemp.txt') as f: lines = f.readlines()
+count = int(len(lines)/input)
+amari = len(lines) % input
 
-# print((',').join(lines)
+print(count)
 
-for n, line in enumerate(lines)
-    e = (n + 1) % x
-    with open('col%s.txt' % e,'w') as f: f.write(line)
-
-
-# argvとは？？？何と読めばいいのか
-# if __name__ == '__main__':がよくわからない
-
+a = [x for x in range(len(lines) + amari) if x % count == 0]
+print(a)
+for i in a:
+    if i != len(lines):
+        print(lines[i:i+count])
+    else:
 
 # test
 # $ split -l 3 hightemp.txt
