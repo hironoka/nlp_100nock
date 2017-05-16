@@ -3,9 +3,13 @@
 
 # print('\t'.join([line1, line2]).replace('\n', ''))
 
-with open('col1.txt', 'r') as f1, open('col2.txt') as f2:
+# with open('col1.txt', 'r') as f1, open('col2.txt') as f2:
+#     content = ((f1.readline() + f2.readline()).replace('\n', '\t'))
+# with open('merge.txt', 'w') as f: f.write(content)
+
+with  open('merge.txt', 'w') as f, open('col1.txt', 'r') as f1, open('col2.txt') as f2:
     content = ((f1.readline() + f2.readline()).replace('\n', '\t'))
-with open('merge.txt', 'w') as f: f.write(content)
+    f.write(content)
 
 # with open('merge.txt', 'w') as f:
 #     with open('col1.txt', 'r') as f1, open('col2.txt') as f2:
